@@ -1,0 +1,54 @@
+---
+import Navigation from '../components/Navigation.astro'
+import { SkipLinks } from 'accessible-astro-components'
+import { Icon } from 'astro-icon/components'
+---
+
+<header>
+  <SkipLinks />
+  <Navigation>
+    <li class="menu-item">
+    <a href="/">Inicio</a>
+    </li>
+    <li class="menu-item">
+      <a href="/blog/">Blog</a>
+    </li>
+    <li class="menu-item">
+      <a href="/eventos/">Eventos</a>
+    </li>
+    <li class="menu-item">
+      <a href="/galeria">Galería</a>
+    </li>
+    <li class="menu-item">
+      <a href="/junta">Junta-Directiva</a>
+    </li>
+  </Navigation>
+</header>
+
+<style lang="scss" is:global>
+  @use '../assets/scss/base/outline' as *;
+
+  header {
+    background-color: #f6f6f6;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    .type-icon a {
+      display: block;
+
+      [data-icon] {
+        height: auto;
+        margin-top: -4px;
+        width: 60px;
+
+        path {
+          fill: blue;
+        }
+      }
+
+      &:hover {
+        [data-icon] path {
+          fill: var(--action-color-state);
+        }
+      }
+    }
+  }
+</style>

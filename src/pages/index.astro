@@ -1,0 +1,36 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import Hero from '../components/Hero.astro'
+import Feature from '../components/Feature.astro'
+import Counter from '../components/Counter.astro'
+import ContentMedia from '../components/ContentMedia.astro'
+import InstagramProfile from '../components/InstagramProfile.astro'
+---
+
+<DefaultLayout title="Home">
+  <Hero />
+  <ContentMedia imgSrc="/geifapage.jpeg">
+    <h2>Bienvenido a <span class="text-gradient">GEIFA</span> </h2>
+    <p class="text-2xl">
+      Somos un grupo estudiantil de física aplicada que busca promover el interés y la curiosidad por la física y su aplicación en el mundo real. Nos enfocamos en el desarrollo de habilidades científicas, el fomento de la investigación y la aplicación de conocimientos teóricos en la solución de problemas aplicados a la sociedad actual.
+    </p>
+  </ContentMedia>
+  <ContentMedia imgSrc="/geifapage2.jpg" reverseImg={true}>
+    <h2 class="text-gradient">Objetivos</h2>
+    <p class="text-2xl">
+      El Grupo Estudiantil Institucional de Física Aplicada (GEIFA) tiene como objetivo principal fomentar y promover el interés y la pasión por la física aplicada entre los estudiantes de la Universidad del Norte a través de actividades académicas, científicas e investigativas, así como también de eventos lúdicos y de esparcimiento, con el fin de generar un ambiente propicio para el aprendizaje y la exploración de la física y la ciencia en general.
+    </p>
+  </ContentMedia>
+  <h1 class="text-center">Siguenos en<span class="text-gradient"> Instagram 🌟</span> </h1>
+ <InstagramProfile />
+</DefaultLayout>
+
+---
+<style lang="scss">
+  .text-gradient {
+    background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-500));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>

@@ -1,0 +1,23 @@
+---
+import DefaultLayout from './DefaultLayout.astro'
+
+const { frontmatter } = Astro.props
+---
+
+<DefaultLayout title={frontmatter.title}>
+  <div class="container">
+    <div class="space-content my-12 mx-50 ">
+      <slot />
+    </div>
+  </div>
+</DefaultLayout>
+
+<style lang="scss">
+  div {
+    font-size: medium;
+  }
+
+  .space-content {
+    margin: 12% 15% 12% 15%;
+  }
+</style>
